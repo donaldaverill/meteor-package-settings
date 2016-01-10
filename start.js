@@ -27,7 +27,11 @@ Meteor.startup(() => {
     const HR = Utils.repeat('_', 45);
     console.log('Settings Loaded'.red);
     console.log(HR.blue);
-    console.log(siteName.grey);
+    if (siteName) {
+      console.log(siteName.grey);
+    } else {
+      console.log('No Site Name Given'.grey);
+    }
     return console.log(HR.green);
   }
 });
